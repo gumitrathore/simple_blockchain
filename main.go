@@ -40,6 +40,7 @@ func generateBlock(oldblock Block,data string)(Block ,error){
 	newBlock.Hash=calculateHash(newBlock)
 	return newBlock,nil
 }
+//check if block is valid
 func isBlockValid(newBlock,oldblock Block)bool{
 	if oldblock.Index+1 !=newBlock.Index{
 		return false 
